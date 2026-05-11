@@ -1,32 +1,32 @@
 # DCM
 
-DCM staat voor Decompressie Manager. Dit is een lokale Windows-tool om meerdere ZIP-bestanden tegelijk te kiezen en uit te pakken.
+DCM stands for Decompression Manager. It is a local Windows tool for selecting multiple ZIP files and extracting them in one action.
 
-## Starten
+## Start
 
-Dubbelklik op:
+Double-click:
 
 ```text
 DCM.lnk
 ```
 
-Als de snelkoppeling nog niet bestaat, klik dan eerst rechts op `create-dcm-shortcut.ps1` en kies `Run with PowerShell`.
+If the shortcut does not exist yet, right-click `create-dcm-shortcut.ps1` and choose `Run with PowerShell`.
 
-Wil je de snelkoppeling op je bureaublad zetten, klik dan rechts op `create-desktop-shortcut.ps1` en kies `Run with PowerShell`.
+If you want the shortcut on your desktop, right-click `create-desktop-shortcut.ps1` and choose `Run with PowerShell`.
 
-## Gebruik
+## Use
 
-1. Klik op `ZIP-bestanden kiezen`.
-2. Selecteer een of meerdere `.zip` bestanden.
-3. Kies een doelmap.
-4. Klik op `Alles decomprimeren`.
+1. Click `Choose ZIP files`.
+2. Select one or more `.zip` files.
+3. Choose an output folder.
+4. Click `Extract all`.
 
-DCM maakt per ZIP-bestand een aparte map aan in de doelmap.
+DCM creates a separate folder for each ZIP file inside the output folder.
 
-## Desktop-icoon
+## Desktop Icon
 
-De snelkoppeling `DCM.lnk` start de app direct via PowerShell. Je hoeft geen `.vbs` bestand te openen.
+The `DCM.lnk` shortcut starts the app directly through PowerShell. It does not use a `.vbs` file anymore.
 
-## Eerste versie
+## First Version
 
-Deze versie ondersteunt ZIP-bestanden, omdat Windows dat standaard kan uitpakken zonder extra programma's. RAR en 7Z kunnen later toegevoegd worden met 7-Zip ondersteuning.
+This version supports ZIP files because Windows can extract ZIP files without extra software. RAR and 7Z support can be added later with 7-Zip.
