@@ -1,5 +1,5 @@
 $shortcutPath = Join-Path $PSScriptRoot "DCM.lnk"
-$targetPath = Join-Path $PSScriptRoot "start-dcm.vbs"
+$scriptPath = Join-Path $PSScriptRoot "DCM.ps1"
 $iconPath = Join-Path $PSScriptRoot "assets\dcm.ico"
 
 if (-not (Test-Path -LiteralPath $iconPath)) {
@@ -8,7 +8,8 @@ if (-not (Test-Path -LiteralPath $iconPath)) {
 
 $shell = New-Object -ComObject WScript.Shell
 $shortcut = $shell.CreateShortcut($shortcutPath)
-$shortcut.TargetPath = $targetPath
+$shortcut.TargetPath = "powershell.exe"
+$shortcut.Arguments = "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `"$scriptPath`""
 $shortcut.WorkingDirectory = $PSScriptRoot
 $shortcut.IconLocation = $iconPath
 $shortcut.Description = "DCM - Decompressie Manager"

@@ -23,6 +23,10 @@ Wil je de snelkoppeling op je bureaublad zetten, klik dan rechts op `create-desk
 
 DCM maakt per ZIP-bestand een aparte map aan in de doelmap.
 
+## Desktop-icoon
+
+De snelkoppeling `DCM.lnk` start de app direct via PowerShell. Je hoeft geen `.vbs` bestand te openen.
+
 ## Eerste versie
 
 Deze versie ondersteunt ZIP-bestanden, omdat Windows dat standaard kan uitpakken zonder extra programma's. RAR en 7Z kunnen later toegevoegd worden met 7-Zip ondersteuning.
