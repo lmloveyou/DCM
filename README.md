@@ -12,6 +12,8 @@ DCM.lnk
 
 Als de snelkoppeling nog niet bestaat, klik dan eerst rechts op `create-dcm-shortcut.ps1` en kies `Run with PowerShell`.
 
+Wil je de snelkoppeling op je bureaublad zetten, klik dan rechts op `create-desktop-shortcut.ps1` en kies `Run with PowerShell`.
+
 ## Gebruik
 
 1. Klik op `ZIP-bestanden kiezen`.
