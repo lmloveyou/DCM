@@ -7,8 +7,10 @@ DCM staat voor Decompressie Manager. Dit is een lokale Windows-tool om meerdere 
 Dubbelklik op:
 
 ```text
-start-dcm.bat
+DCM.lnk
 ```
+
+Als de snelkoppeling nog niet bestaat, klik dan eerst rechts op `create-dcm-shortcut.ps1` en kies `Run with PowerShell`.
 
 ## Gebruik
 
