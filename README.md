@@ -25,7 +25,7 @@ DCM creates a separate folder for each ZIP file inside the output folder.
 
 ## Desktop Icon
 
-The `DCM.lnk` shortcut starts the app directly through PowerShell. It does not use a `.vbs` file anymore.
+The `DCM.lnk` shortcut starts the app through `wscript.exe`, which launches DCM silently without opening a terminal window.
 
 ## First Version
 

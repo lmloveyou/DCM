@@ -1,8 +1,8 @@
 # Create a DCM shortcut inside the project folder.
 $shortcutPath = Join-Path $PSScriptRoot "DCM.lnk"
 
-# Point the shortcut directly to the main PowerShell app script.
-$scriptPath = Join-Path $PSScriptRoot "DCM.ps1"
+# Point the shortcut to the silent launcher.
+$launcherPath = Join-Path $PSScriptRoot "start-dcm.vbs"
 
 # Use the generated DCM icon for the shortcut.
 $iconPath = Join-Path $PSScriptRoot "assets\dcm.ico"
@@ -16,9 +16,9 @@ if (-not (Test-Path -LiteralPath $iconPath)) {
 $shell = New-Object -ComObject WScript.Shell
 $shortcut = $shell.CreateShortcut($shortcutPath)
 
-# Start PowerShell directly so Windows does not ask how to open a .vbs file.
-$shortcut.TargetPath = "powershell.exe"
-$shortcut.Arguments = "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `"$scriptPath`""
+# Start the VBS launcher through wscript.exe so no terminal window is shown.
+$shortcut.TargetPath = Join-Path $env:WINDIR "System32\wscript.exe"
+$shortcut.Arguments = "`"$launcherPath`""
 $shortcut.WorkingDirectory = $PSScriptRoot
 $shortcut.IconLocation = $iconPath
 $shortcut.Description = "DCM - Decompression Manager"
